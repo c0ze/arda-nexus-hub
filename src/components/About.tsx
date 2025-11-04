@@ -32,6 +32,18 @@ const About = () => {
           </p>
         </div>
 
+        <div className="max-w-3xl mx-auto bg-card border border-border rounded-lg p-8 shadow-soft space-y-4">
+          <p className="text-foreground leading-relaxed">
+            I've been living in <span className="font-semibold text-primary">Japan since 2004</span>, where I earned my Master's degree in Computer Science from <span className="font-semibold">Keio University</span> (2006-2008). I also pursued PhD studies in Embedded Processor Design and Optimization from 2008-2011.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            With over <span className="font-semibold text-primary">20 years of professional experience</span>, I've worked across the full technology stack - from embedded systems to cloud architecture. Currently serving as a Systems Architect at Veltra since 2024, I specialize in migrating monolithic applications to microservices and building scalable infrastructure solutions.
+          </p>
+          <p className="text-foreground leading-relaxed">
+            My journey has taken me through various roles at companies like Gaussy, Robotfund, and Mobilous, always focusing on pragmatic solutions and continuous learning.
+          </p>
+        </div>
+
         <div className="grid md:grid-cols-3 gap-6">
           {highlights.map((item, index) => (
             <Card
