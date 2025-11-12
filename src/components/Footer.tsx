@@ -1,4 +1,4 @@
-import { Github, Mail, Linkedin } from "lucide-react";
+import { Github, Mail, Linkedin, Guitar } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -38,6 +38,15 @@ const Footer = () => {
               aria-label="Email"
             >
               <Mail className="w-5 h-5" />
+            </a>
+            <a
+              href="https://pagan.tr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full bg-secondary hover:bg-primary hover:text-primary-foreground transition-smooth flex items-center justify-center"
+              aria-label="Pagan"
+            >
+              <Guitar className="w-5 h-5" />
             </a>
           </div>
         </div>
