@@ -46,6 +46,17 @@ const Hero = () => {
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </a>
           </Button>
+          <Button
+            variant="outline"
+            size="lg"
+            className="group gap-2 border-2 transition-smooth"
+            asChild
+          >
+            <a href="https://ai.arda.tr" target="_blank" rel="noopener noreferrer">
+              Chat with me
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
+          </Button>
         </div>
       </div>
     </section>
