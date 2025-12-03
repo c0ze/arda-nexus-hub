@@ -7,7 +7,7 @@ const Portfolio = () => {
     {
       title: "Domino Game",
       description: "A classic Domino game built with Love2D and Lua. Play against the computer in this web-based version.",
-      image: "/placeholder.svg",
+      image: "/domino.png",
       link: "https://coz3-domino.netlify.app/",
       tags: ["Lua", "Love2D", "Game Dev"],
       playable: true,
@@ -15,7 +15,7 @@ const Portfolio = () => {
     {
       title: "Hackerman",
       description: "Dive into the digital realm with this hacking simulation. Test your skills and breach the system.",
-      image: "/placeholder.svg",
+      image: "/hackerman.png",
       link: "https://coz3-hackerman.netlify.app/",
       tags: ["Simulation", "Puzzle", "Web Game"],
       playable: true,
@@ -23,7 +23,7 @@ const Portfolio = () => {
     {
       title: "Commando",
       description: "A retro-style action game. Take control and fight your way through enemy lines.",
-      image: "/placeholder.svg",
+      image: "/commando.png",
       link: "https://coz3-commando.netlify.app/",
       tags: ["Action", "Retro", "Web Game"],
       playable: true,
@@ -46,14 +46,16 @@ const Portfolio = () => {
           {projects.map((project, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm group">
               <div className="aspect-video w-full overflow-hidden bg-muted relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </a>
                 {project.playable && (
-                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <Button variant="secondary" className="gap-2" asChild>
+                  <div className="absolute inset-0 bg-black/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <Button variant="secondary" className="gap-2 pointer-events-auto" asChild>
                       <a href={project.link} target="_blank" rel="noopener noreferrer">
                         <Gamepad2 className="w-4 h-4" />
                         Play Now
@@ -110,7 +112,7 @@ const Portfolio = () => {
             {
               title: "Git Roast",
               description: "A CLI tool that roasts your git commits. Make your version control a little more entertaining.",
-              image: "/placeholder.svg",
+              image: "/git-roast.png",
               link: "https://github.com/c0ze/git-roast",
               tags: ["CLI", "Go", "Tool"],
               playable: false,
@@ -118,11 +120,13 @@ const Portfolio = () => {
           ].map((tool, index) => (
             <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm group">
               <div className="aspect-video w-full overflow-hidden bg-muted relative">
-                <img
-                  src={tool.image}
-                  alt={tool.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+                <a href={tool.link} target="_blank" rel="noopener noreferrer" className="block w-full h-full cursor-pointer">
+                  <img
+                    src={tool.image}
+                    alt={tool.title}
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </a>
               </div>
               <CardHeader>
                 <div className="flex flex-wrap gap-2 mb-2">
