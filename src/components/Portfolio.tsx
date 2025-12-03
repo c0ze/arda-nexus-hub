@@ -95,6 +95,66 @@ const Portfolio = () => {
             </Card>
           ))}
         </div>
+
+        <div className="text-center space-y-4 pt-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+            Tools
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Utilities and tools I've developed to improve workflows.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Git Roast",
+              description: "A CLI tool that roasts your git commits. Make your version control a little more entertaining.",
+              image: "/placeholder.svg",
+              link: "https://github.com/c0ze/git-roast",
+              tags: ["CLI", "Go", "Tool"],
+              playable: false,
+            }
+          ].map((tool, index) => (
+            <Card key={index} className="overflow-hidden hover:shadow-lg transition-all duration-300 border-border/50 bg-card/50 backdrop-blur-sm group">
+              <div className="aspect-video w-full overflow-hidden bg-muted relative">
+                <img
+                  src={tool.image}
+                  alt={tool.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <CardHeader>
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {tool.tags.map((tag, tagIndex) => (
+                    <span
+                      key={tagIndex}
+                      className="px-2 py-1 text-xs rounded-full bg-primary/10 text-primary font-medium"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <CardTitle className="flex items-center justify-between">
+                  {tool.title}
+                  <a
+                    href={tool.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-base">
+                  {tool.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );
