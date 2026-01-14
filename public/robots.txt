@@ -1,3 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://arda.tr/sitemap.xml
+
 User-agent: Googlebot
 Allow: /
 
@@ -10,5 +15,11 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
 Allow: /
