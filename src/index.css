@@ -8,6 +8,10 @@ Themes: 7 Dracula Pro variants
 */
 
 @layer base {
+  html {
+    font-size: 125%;
+  }
+
   /* Dracula Pro (Default) - Purple/violet theme */
   :root,
   .dracula-pro {
