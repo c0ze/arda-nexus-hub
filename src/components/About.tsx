@@ -21,42 +21,45 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-background">
-      <div className="max-w-6xl mx-auto space-y-12">
+    <section className="py-24 px-6 bg-card/30">
+      <div className="max-w-4xl mx-auto space-y-16">
+        {/* Section header */}
         <div className="text-center space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            About Me
+          <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
+            About
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-xl mx-auto">
             A pragmatic programmer who enjoys tinkering, hacking, and exploring new languages and frameworks.
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto bg-card border border-border rounded-lg p-8 shadow-soft space-y-4">
-          <p className="text-foreground leading-relaxed">
-            I've been living in <span className="font-semibold text-primary">Japan since 2004</span>, where I earned my Master's degree in Computer Science from <span className="font-semibold">Keio University</span> (2006-2008). I also pursued PhD studies in Embedded Processor Design and Optimization from 2008-2011.
+        {/* Bio */}
+        <div className="bg-card border border-border rounded-xl p-8 space-y-4">
+          <p className="text-foreground/90 leading-relaxed">
+            I've been living in <span className="text-primary font-medium">Japan since 2004</span>, where I earned my Master's degree in Computer Science from Keio University (2006-2008). I also pursued PhD studies in Embedded Processor Design and Optimization from 2008-2011.
           </p>
-          <p className="text-foreground leading-relaxed">
-            With over <span className="font-semibold text-primary">20 years of professional experience</span>, I've worked across the full technology stack - from embedded systems to cloud architecture. Currently serving as a Systems Architect at Veltra since 2024, I specialize in migrating monolithic applications to microservices and building scalable infrastructure solutions.
+          <p className="text-foreground/90 leading-relaxed">
+            With over <span className="text-primary font-medium">20 years of professional experience</span>, I've worked across the full technology stack - from embedded systems to cloud architecture. Currently serving as a Systems Architect at Veltra since 2024, I specialize in migrating monolithic applications to microservices and building scalable infrastructure solutions.
           </p>
-          <p className="text-foreground leading-relaxed">
+          <p className="text-foreground/90 leading-relaxed">
             My journey has taken me through various roles at companies like Gaussy, Robotfund, and Mobilous, always focusing on pragmatic solutions and continuous learning.
           </p>
         </div>
 
+        {/* Highlights */}
         <div className="grid md:grid-cols-3 gap-6">
           {highlights.map((item, index) => (
             <Card
               key={index}
-              className="p-6 space-y-4 hover:shadow-medium transition-smooth bg-card border-border"
+              className="p-6 space-y-4 bg-card border-border hover:border-primary/30 transition-colors"
             >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                <item.icon className="w-6 h-6 text-primary" />
+              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                <item.icon className="w-5 h-5 text-primary" />
               </div>
-              <h3 className="text-xl font-semibold text-card-foreground">
+              <h3 className="text-lg font-medium text-card-foreground">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 {item.description}
               </p>
             </Card>
