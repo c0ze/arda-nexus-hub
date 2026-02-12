@@ -28,6 +28,22 @@ const Portfolio = () => {
       tags: ["Action", "Retro", "Web Game"],
       playable: true,
     },
+    {
+      title: "Skriv.ist",
+      description: "Multiplatform ebook reader.",
+      image: "/skrivist_logo_3.png",
+      link: "https://skriv.ist",
+      tags: ["Ebook", "Reader", "Multiplatform"],
+      playable: false,
+    },
+    {
+      title: "Fablecast.kids",
+      description: "AI generated children books.",
+      image: "/fablecast.png",
+      link: "https://fablecast.kids",
+      tags: ["AI", "Children Books", "Storytelling"],
+      playable: false,
+    },
   ];
 
   return (
@@ -37,10 +53,10 @@ const Portfolio = () => {
         <div className="space-y-8">
           <div className="text-center space-y-4">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-              Games
+              Projects
             </h2>
             <p className="text-muted-foreground max-w-xl mx-auto">
-              A collection of games and interactive experiences I've built.
+              A collection of digital products, games, and interactive experiences I've built.
             </p>
           </div>
 
@@ -79,7 +95,7 @@ const Portfolio = () => {
                   </div>
                   <CardTitle className="flex items-center justify-between text-base">
                     {project.title}
-                    {project.playable && (
+                    {project.link && (
                       <a
                         href={project.link}
                         target="_blank"
